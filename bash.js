@@ -15,6 +15,7 @@ process.stdin.on('data', function (data) {
     var date = new Date();
     process.stdout.write(date.toString());
   }
+  console.log('TEST')
   
   process.stdout.write('\nprompt > ');
 });
