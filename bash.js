@@ -10,10 +10,10 @@ process.stdin.on('data', function (data) {
   if (cmd === "pwd") {
     var pwd = process.argv[1];
     process.stdout.write(pwd);
-    process.stdout.write('\nprompt > ');
+  } else if (cmd === "date") {
+    var date = new Date();
+    process.stdout.write(date.toString());
   }
 
-//   process.stdout.write('You typed: ' + cmd);
-//   process.stdout.write('\nprompt > ');
-
+  process.stdout.write('\nprompt > ');
 });
